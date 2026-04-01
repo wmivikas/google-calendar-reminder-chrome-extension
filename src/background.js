@@ -523,7 +523,7 @@ async function createPreviewNotification() {
   await createEventNotification(
     {
       id: `preview-${Date.now()}`,
-      title: "Calendra Pulse Test Reminder",
+      title: "Calendar Pulse Test Reminder",
       location: "Preview alert",
       htmlLink: "https://calendar.google.com/calendar/u/0/r",
       startMs
