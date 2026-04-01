@@ -1,0 +1,145 @@
+:root {
+  --bg: #f4f7fc;
+  --panel: #ffffff;
+  --ink: #0b1f3b;
+  --muted: #4a5a73;
+  --brand: #1565d8;
+  --brand-2: #0fb9b1;
+  --line: #d9e4f3;
+  --ok: #0f9d58;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI Variable", "Trebuchet MS", "Bahnschrift", sans-serif;
+  background: radial-gradient(circle at 100% -20%, #c7f0ee 0%, transparent 35%),
+    radial-gradient(circle at -10% 0%, #d6e8ff 0%, transparent 45%),
+    var(--bg);
+  color: var(--ink);
+}
+
+.page {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 28px 18px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 12px 34px rgba(20, 36, 72, 0.08);
+  padding: 22px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: var(--brand-2);
+}
+
+h1 {
+  margin: 4px 0 8px;
+  font-size: 30px;
+}
+
+.subtitle {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input[type="number"],
+input[type="time"] {
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0 11px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+input[type="number"]:focus,
+input[type="time"]:focus {
+  outline: 2px solid rgba(21, 101, 216, 0.25);
+  border-color: var(--brand);
+}
+
+.toggle {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+button {
+  height: 42px;
+  border: 0;
+  border-radius: 10px;
+  padding: 0 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, var(--brand), #2d9bff);
+}
+
+button:hover {
+  filter: brightness(1.06);
+}
+
+.secondary-button {
+  color: var(--ink);
+  background: #e9f1ff;
+  border: 1px solid #c7d9f7;
+}
+
+.ghost-button {
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+}
+
+input:disabled {
+  background: #f3f6fb;
+  color: #7f8ca1;
+}
+
+#statusMessage {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ok);
+  font-weight: 700;
+}
+
+#statusMessage.error {
+  color: #c73636;
+}

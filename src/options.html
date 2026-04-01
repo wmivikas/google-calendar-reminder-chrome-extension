@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendra Pulse Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header>
+          <p class="eyebrow">EXTENSION SETTINGS</p>
+          <h1>Calendra Pulse</h1>
+          <p class="subtitle">Tune alert timing so reminders hit exactly when you need them.</p>
+        </header>
+
+        <form id="settingsForm" class="settings-grid">
+          <label>
+            Reminder lead (minutes)
+            <input id="reminderLeadMinutes" type="number" min="1" max="120" required />
+          </label>
+
+          <label>
+            Look-ahead window (minutes)
+            <input id="lookAheadMinutes" type="number" min="15" max="1440" required />
+          </label>
+
+          <label>
+            Sync/check interval (minutes)
+            <input id="checkIntervalMinutes" type="number" min="1" max="60" required />
+          </label>
+
+          <label class="toggle">
+            <input id="desktopNotifications" type="checkbox" />
+            Enable desktop notifications
+          </label>
+
+          <label class="toggle">
+            <input id="badgeEnabled" type="checkbox" />
+            Show badge for urgent reminders
+          </label>
+
+          <label class="toggle">
+            <input id="quietHoursEnabled" type="checkbox" />
+            Enable quiet hours
+          </label>
+
+          <label>
+            Quiet hours start
+            <input id="quietStart" type="time" />
+          </label>
+
+          <label>
+            Quiet hours end
+            <input id="quietEnd" type="time" />
+          </label>
+
+          <div class="actions">
+            <button id="saveButton" type="submit">Save Settings</button>
+            <button id="testNotificationButton" type="button" class="secondary-button">
+              Send Test Alert
+            </button>
+            <button id="resetDefaultsButton" type="button" class="ghost-button">
+              Reset Defaults
+            </button>
+            <p id="statusMessage" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>

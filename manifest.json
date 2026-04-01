@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Calendra Pulse",
+  "short_name": "Calendra",
+  "description": "Connects to Google Calendar and sends clear reminders in Chrome so you never miss events.",
+  "version": "1.0.0",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "alarms",
+    "identity",
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "REPLACE_WITH_YOUR_GOOGLE_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.readonly",
+      "https://www.googleapis.com/auth/userinfo.email"
+    ]
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "Calendra Pulse",
+    "default_popup": "src/popup.html"
+  },
+  "options_page": "src/options.html",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}

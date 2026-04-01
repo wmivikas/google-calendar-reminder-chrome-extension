@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendra Pulse</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="card">
+        <header class="hero">
+          <p class="kicker">FOCUS MODE REMINDERS</p>
+          <h1>Calendra Pulse</h1>
+          <p id="statusText" class="status disconnected">Not connected</p>
+          <p id="accountText" class="account">Calendar account: not connected</p>
+        </header>
+
+        <section id="errorBanner" class="error-banner hidden"></section>
+
+        <section id="onboardingCard" class="onboarding-card hidden">
+          <h2 class="onboarding-title">Quick Start</h2>
+          <ol class="onboarding-list">
+            <li>Click Connect Calendar.</li>
+            <li>Choose account in Google web sign-in window.</li>
+            <li>Keep Chrome notifications enabled.</li>
+          </ol>
+          <p class="onboarding-note">Tip: Open Settings to tune reminder timing and quiet hours.</p>
+          <p id="oauthHint" class="oauth-hint"></p>
+        </section>
+
+        <section class="actions">
+          <button id="connectButton" class="btn btn-primary">Connect Calendar (Web)</button>
+          <button id="refreshButton" class="btn btn-secondary">Refresh</button>
+          <button id="openButton" class="btn btn-secondary">Open Calendar</button>
+          <button id="optionsButton" class="btn btn-secondary">Settings</button>
+        </section>
+
+        <section class="list-wrap">
+          <div class="list-head">
+            <h2>Upcoming Events</h2>
+            <p id="lastSync" class="last-sync"></p>
+          </div>
+          <ul id="eventsList" class="events-list"></ul>
+          <p id="emptyState" class="empty-state">No upcoming events in your look-ahead window.</p>
+        </section>
+
+        <footer class="footer">
+          <button id="switchAccountButton" class="text-button" type="button">Switch account</button>
+          <button id="signOutButton" class="text-button">Sign out</button>
+        </footer>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

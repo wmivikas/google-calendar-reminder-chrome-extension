@@ -1,0 +1,268 @@
+:root {
+  --bg-1: #0f172a;
+  --bg-2: #111827;
+  --accent-1: #11c5bf;
+  --accent-2: #f59e0b;
+  --primary: #1583ff;
+  --primary-strong: #0d63c7;
+  --ink: #ecf3ff;
+  --muted: #afbdd8;
+  --danger: #ff6b6b;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  font-family: "Segoe UI Variable", "Trebuchet MS", "Bahnschrift", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 20% -10%, #1d4ed8 0%, transparent 40%),
+    radial-gradient(circle at 100% 0%, #0f766e 0%, transparent 35%),
+    linear-gradient(160deg, var(--bg-1), var(--bg-2));
+}
+
+.shell {
+  padding: 12px;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.34);
+  overflow: hidden;
+  animation: rise-in 220ms ease-out;
+}
+
+.hero {
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.kicker {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  color: var(--accent-1);
+  font-weight: 700;
+}
+
+h1 {
+  margin: 4px 0 6px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.status {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.connected {
+  color: #5df2b0;
+}
+
+.status.disconnected {
+  color: #ffb3b3;
+}
+
+.account {
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.error-banner {
+  margin: 10px 12px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 107, 107, 0.45);
+  background: rgba(255, 107, 107, 0.14);
+  color: #ffd5d5;
+  font-size: 12px;
+}
+
+.onboarding-card {
+  margin: 10px 12px 0;
+  border: 1px solid rgba(17, 197, 191, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(17, 197, 191, 0.11);
+}
+
+.onboarding-title {
+  margin: 0 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #97fff0;
+}
+
+.onboarding-list {
+  margin: 0;
+  padding-left: 16px;
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.onboarding-note {
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.oauth-hint {
+  margin: 8px 0 0;
+  font-size: 10px;
+  line-height: 1.35;
+  color: #9ed4ff;
+  word-break: break-all;
+}
+
+.hidden {
+  display: none;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 12px;
+}
+
+.btn {
+  height: 36px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.btn:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn-primary {
+  grid-column: 1 / -1;
+  color: white;
+  background: linear-gradient(90deg, var(--primary), #2aa5ff);
+}
+
+.btn-secondary {
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--surface);
+}
+
+.list-wrap {
+  padding: 0 12px 10px;
+}
+
+.list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+h2 {
+  margin: 2px 0 8px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.last-sync {
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.events-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.events-list li {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 9px 10px;
+  animation: rise-in 220ms ease-out;
+}
+
+.events-list li.clickable {
+  cursor: pointer;
+}
+
+.events-list li.clickable:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.event-title {
+  margin: 0 0 2px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.event-time {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.empty-state {
+  margin: 8px 0 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 12px 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.text-button {
+  border: 0;
+  background: transparent;
+  color: #ffb7b7;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
