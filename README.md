@@ -1,60 +1,84 @@
-# Calendra Pulse
+# Calendra Pulse ⏰
 
-Calendra Pulse is an open-source Chrome extension for Google Calendar reminders.
+### Google Calendar Reminder Chrome Extension for focused work and on-time meetings
 
-It helps you stay focused and still catch important meetings with clean alerts, quick event visibility, and configurable reminder timing.
+<p align="center">
+	<a href="https://github.com/wmivikas/google-calendar-reminder-chrome-extension/stargazers">
+		<img alt="GitHub Stars" src="https://img.shields.io/github/stars/wmivikas/google-calendar-reminder-chrome-extension?style=for-the-badge&logo=github&color=ffcf40" />
+	</a>
+	<a href="https://github.com/wmivikas/google-calendar-reminder-chrome-extension/watchers">
+		<img alt="GitHub Watchers" src="https://img.shields.io/github/watchers/wmivikas/google-calendar-reminder-chrome-extension?style=for-the-badge&logo=github&color=4fb3ff" />
+	</a>
+	<a href="https://github.com/wmivikas/google-calendar-reminder-chrome-extension/network/members">
+		<img alt="GitHub Forks" src="https://img.shields.io/github/forks/wmivikas/google-calendar-reminder-chrome-extension?style=for-the-badge&logo=github&color=7bd88f" />
+	</a>
+</p>
 
-## Features
+Calendra Pulse helps you stay in deep focus and still catch important meetings.
 
-- Connect Google Calendar from the extension popup
-- See upcoming events directly in Chrome
-- Get strong reminder notifications before meetings
-- Click any event to open it in Google Calendar
-- Configure reminder lead time, look-ahead window, and check interval
-- Quiet hours mode for deep-focus blocks
-- Test alert button for quick notification checks
+It connects to Google Calendar, shows upcoming events in your browser, and sends reminder alerts before events start.
 
-## Quick Start
+## Why People Like It ✨
 
-1. Download this repository (or release zip).
+- Fast Google Calendar connect from popup
+- Clean and readable upcoming events list
+- One-click open event in Google Calendar
+- Strong reminder notifications that are easy to notice
+- Quiet hours support for night or deep-work sessions
+- Test alert button to verify setup instantly
+
+## Install in Minutes 🚀
+
+1. Download this repository (or latest release zip).
 2. Open Chrome and go to chrome://extensions.
-3. Enable Developer mode.
-4. Click Load unpacked and select this folder.
+3. Turn on Developer mode.
+4. Click Load unpacked and select this project folder.
 5. Add your OAuth client ID in `manifest.json`.
-6. Reload the extension.
-7. Open the popup and click Connect Calendar (Web).
+6. Reload extension.
+7. Open popup and click Connect Calendar (Web).
 
-Detailed setup is in [INSTALL_FROM_GITHUB.md](INSTALL_FROM_GITHUB.md).
+Full guide: [INSTALL_FROM_GITHUB.md](INSTALL_FROM_GITHUB.md)
 
-## OAuth Setup
+## Google OAuth Setup 🔐
 
 1. Open Google Cloud Console.
 2. Enable Google Calendar API.
 3. Configure OAuth consent screen.
 4. Create OAuth Client ID with type Web application.
-5. Add redirect URI: https://<your-extension-id>.chromiumapp.org/
+5. Add redirect URI exactly:
+	 https://<your-extension-id>.chromiumapp.org/
 6. Put your client ID into `manifest.json`.
 
-If consent screen mode is Testing, only listed Test users can sign in.
+If consent screen is in Testing mode, only listed Test users can sign in.
 
-## Public Repo Safety
+## Give This Repo a Star ⭐
 
-- This repository uses a placeholder OAuth client ID.
-- Do not commit your personal production OAuth client ID to public GitHub.
-- Keep private credentials only in local/private copies.
+If this project helps you, please support it:
 
-## Repository Docs
+1. Click ⭐ Star on GitHub
+2. Click 👀 Watch to follow updates
+3. Share the repo with friends or teammates
 
-- Install guide: [INSTALL_FROM_GITHUB.md](INSTALL_FROM_GITHUB.md)
-- Publish guide: [PUBLISH_ON_GITHUB.md](PUBLISH_ON_GITHUB.md)
-- Release notes template: [GITHUB_RELEASE_TEMPLATE.md](GITHUB_RELEASE_TEMPLATE.md)
-- Privacy policy: [PRIVACY_POLICY.md](PRIVACY_POLICY.md)
+Small support helps this project grow a lot.
 
-## OAuth Scopes
+## Public Repo Safety 🛡️
+
+- This repository intentionally uses a placeholder OAuth client ID.
+- Do not commit personal production OAuth credentials to public GitHub.
+- Keep private credentials in local/private copies only.
+
+## Docs 📚
+
+- [INSTALL_FROM_GITHUB.md](INSTALL_FROM_GITHUB.md)
+- [PUBLISH_ON_GITHUB.md](PUBLISH_ON_GITHUB.md)
+- [GITHUB_RELEASE_TEMPLATE.md](GITHUB_RELEASE_TEMPLATE.md)
+- [PRIVACY_POLICY.md](PRIVACY_POLICY.md)
+
+## Scopes Used 🔎
 
 - https://www.googleapis.com/auth/calendar.readonly
 - https://www.googleapis.com/auth/userinfo.email
 
-## License
+## License 📄
 
-Use your preferred open-source license before public distribution.
+Choose and add your preferred open-source license before broad public distribution.
