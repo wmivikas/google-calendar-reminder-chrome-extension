@@ -1,4 +1,4 @@
-# Calendra Pulse ⏰
+# calendar Pulse ⏰
 
 ### Google Calendar Reminder Chrome Extension for focused work and on-time meetings
 
@@ -14,7 +14,7 @@
 	</a>
 </p>
 
-Calendra Pulse helps you stay in deep focus and still catch important meetings.
+calendar Pulse helps you stay in deep focus and still catch important meetings.
 
 It connects to Google Calendar, shows upcoming events in your browser, and sends reminder alerts before events start.
 
